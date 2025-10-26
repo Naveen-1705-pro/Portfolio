@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen Solanki - Frontend Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader-container">
+            <div class="cyber-loader">
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+            </div>
+            <div class="loading-text">
+                <span class="glitch-text" data-text="LOADING">LOADING</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <canvas id="particle-canvas" class="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">
+                    <span class="text-blue glitch-text" data-text="P">P</span>ort
+                    <span class="text-purple glitch-text" data-text="F">F</span>olio
+                </span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <i class="fas fa-code"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="floating-shapes">
+            <div class="floating-cube cube-1"></div>
+            <div class="floating-cube cube-2"></div>
+            <div class="floating-cube cube-3"></div>
+            <div class="floating-ring ring-1"></div>
+            <div class="floating-ring ring-2"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="profile-image-container flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="profile-image">
+                            <div class="image-placeholder">
+                                <span><img src="Frontend.gif" class="image-placeholder"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="profile-info">
+                            <i class="fas fa-code"></i>
+                            <p>Frontend Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line">Hello, I'm</span>
+                <span class="title-name gradient-text">Naveen Solanki</span>
+            </h1>
+
+            <div class="typing-container">
+                <span class="bracket">&lt;</span>
+                <span class="typing-text" id="typing-text"></span>
+                <span class="cursor">|</span>
+                <span class="bracket">/&gt;</span>
+            </div>
+
+            <p class="hero-description">
+                Crafting digital experiences with cutting-edge technology and innovative design. 
+                Specializing in React, TypeScript, and modern web development.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="cyber-button primary" onclick="scrollToSection('projects')">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <a href="Resume_compressed.pdf" style="text-decoration: none;"><button class="cyber-button secondary">
+                    <span>Download CV</span>
+                    <i class="fas fa-download"></i></a>
+                </button>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/Naveen-1705-pro" class="social-icon flip-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="www.linkedin.com/in/naveen-solanki-6a6434301" class="social-icon flip-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" class="social-icon flip-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="about-img-placeholder">
+                                <div class="img-content">
+                                    <div class="profile-avatar">
+                                        <span><img src="Gemini_Generated_Image_nzcpmdnzcpmdnzcp.png"class="profimg"></span>
+                                    </div>
+                                    <!-- <p>Profile Image</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="about-skills-preview">
+                                <h4>Quick Skills</h4>
+                                <div class="skill-tags">
+                                    <span>React</span>
+                                    <span>TypeScript</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <h3>Passionate Frontend Developer with a Vision</h3>
+                    <p>I'm a dedicated frontend developer with over 3 years of experience creating exceptional digital experiences. My journey in web development started with a fascination for turning ideas into interactive, user-friendly applications.</p>
+                    <p>Specialized in React.js, TypeScript, and modern CSS frameworks, I focus on building scalable, performant applications that not only look great but also provide seamless user experiences across all devices.</p>
+                    <p>When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers in the community.</p>
+                    <button class="cyber-button primary">
+                        <span>Let's Work Together</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="stat-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="stat-detail">
+                                <h4>Projects</h4>
+                                <p>From small websites to complex web applications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="stat-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="stat-number" data-target="0">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="stat-detail">
+                                <h4>Experience</h4>
+                                <p>Continuous learning and growing in web development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="stat-icon">
+                                <i class="fas fa-target"></i>
+                            </div>
+                            <div class="stat-number" data-target="95">0</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="stat-detail">
+                                <h4>Satisfaction</h4>
+                                <p>Delivering quality work that exceeds expectations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="stat-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Awards Won</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="stat-detail">
+                                <h4>Recognition</h4>
+                                <p>Acknowledged for excellence in web development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Skills & Expertise</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">A comprehensive toolkit of modern technologies and frameworks</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Frontend Technologies</h3>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>React.js</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="95"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>JavaScript</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Next.js</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Tailwind CSS</span>
+                                        <span>92%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="92"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="skill-details">
+                                <h4>Frontend Mastery</h4>
+                                <p>Building responsive, interactive user interfaces with modern frameworks and libraries.</p>
+                                <div class="tech-icons">
+                                    <i class="fab fa-react"></i>
+                                    <i class="fab fa-js-square"></i>
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Development Tools</h3>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Git & GitHub</span>
+                                        <span>88%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="88"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Webpack</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="80"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Vite</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Docker</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="75"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="skill-details">
+                                <h4>Development Tools</h4>
+                                <p>Proficient with modern development tools and workflows for efficient coding.</p>
+                                <div class="tech-icons">
+                                    <i class="fab fa-git-alt"></i>
+                                    <i class="fab fa-docker"></i>
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Design & UI/UX</h3>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Figma</span>
+                                        <span>87%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="87"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Adobe XD</span>
+                                        <span>82%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="82"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Responsive Design</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="95"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Animations</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="skill-details">
+                                <h4>Design Excellence</h4>
+                                <p>Creating beautiful, user-centered designs with attention to detail and usability.</p>
+                                <div class="tech-icons">
+                                    <i class="fab fa-figma"></i>
+                                    <i class="fas fa-palette"></i>
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <h3>Technologies I Work With</h3>
+                <div class="tech-icons-grid">
+                    <div class="tech-icon flip-icon" data-tech="React">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-icon flip-icon" data-tech="TypeScript">
+                        <i class="fab fa-js-square"></i>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tech-icon flip-icon" data-tech="Next.js">
+                        <i class="fas fa-code"></i>
+                        <span>Next.js</span>
+                    </div>
+                    <div class="tech-icon flip-icon" data-tech="Tailwind">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="tech-icon flip-icon" data-tech="Node.js">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-icon flip-icon" data-tech="MongoDB">
+                        <i class="fas fa-database"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-icon flip-icon" data-tech="PostgreSQL">
+                        <i class="fas fa-server"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-icon flip-icon" data-tech="AWS">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Featured Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Showcasing my latest work and creative solutions</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card flip-card featured">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <img src="https://images.pexels.com/photos/3184359/pexels-photo-3184359.jpeg?auto=compress&cs=tinysrgb&w=600" alt="E-Commerce Platform">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                                <div class="featured-badge">FEATURED</div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Perfume website Platform</h3>
+                                <p>A full-stack e-commerce solution built with React, Node.js, and PostgreSQL.</p>
+                                <div class="tech-tags">
+                                    <span>React</span>
+                                    <span>TypeScript</span>
+                                    <span>Node.js</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-details">
+                                <h4>Project Details</h4>
+                                <ul>
+                                    <li>User authentication system</li>
+                                    <li>Payment integration with Stripe</li>
+                                    <li>Real-time inventory management</li>
+                                    <li>Admin dashboard</li>
+                                    <li>Responsive design</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="#" class="cyber-button primary small">View Live</a>
+                                    <a href="https://github.com/Naveen-1705-pro/Perfume-Website"" class="cyber-button secondary small">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <img src="https://images.pexels.com/photos/3184300/pexels-photo-3184300.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Task Management App">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Task Management App</h3>
+                                <p>A collaborative task management application with real-time updates.</p>
+                                <div class="tech-tags">
+                                    <span>React</span>
+                                    <span>Firebase</span>
+                                    <span>Material-UI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-details">
+                                <h4>Features</h4>
+                                <ul>
+                                    <li>Drag & drop functionality</li>
+                                    <li>Real-time collaboration</li>
+                                    <li>Team management</li>
+                                    <li>Progress tracking</li>
+                                    <li>Mobile responsive</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="#" class="cyber-button primary small">View Live</a>
+                                    <a href="#" class="cyber-button secondary small">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <img src="https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Weather Dashboard">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Weather Dashboard</h3>
+                                <p>An interactive weather dashboard with beautiful visualizations.</p>
+                                <div class="tech-tags">
+                                    <span>React</span>
+                                    <span>Chart.js</span>
+                                    <span>API</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-details">
+                                <h4>Capabilities</h4>
+                                <ul>
+                                    <li>Weather forecasts</li>
+                                    <li>Location tracking</li>
+                                    <li>Data visualization</li>
+                                    <li>Multiple locations</li>
+                                    <li>Historical data</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="#" class="cyber-button primary small">View Live</a>
+                                    <a href="https://github.com/Naveen-1705-pro/Weather-project/blob/main/Weather-project.code-workspace" class="cyber-button secondary small">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card flip-card featured">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Social Media Analytics">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                                <div class="featured-badge">FEATURED</div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Health Care Platform</h3>
+                                <p>Quick check medical test for HealthCare based on current symptom</p>
+                                <div class="tech-tags">
+                                    <span>JavaScript</span>
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-details">
+                                <h4>HealthCare Features</h4>
+                                <ul>
+                                    <li>Health Performance</li>
+                                    <li>Data visualization</li>
+                                    <li>Multi-platform support</li>
+                                    <li>Custom reports</li>
+                                    <li>Real-time analysis</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="#" class="cyber-button primary small">View Live</a>
+                                    <a href="https://github.com/Naveen-1705-pro/HealthCare-web-application" class="cyber-button secondary small">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Portfolio Website">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Portfolio Website</h3>
+                                <p>A modern, responsive portfolio website with 3D animations.</p>
+                                <div class="tech-tags">
+                                    <span>React</span>
+                                    <span>Three.js</span>
+                                    <span>CSS3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-details">
+                                <h4>Design Features</h4>
+                                <ul>
+                                    <li>3D animations</li>
+                                    <li>Smooth scrolling</li>
+                                    <li>Interactive elements</li>
+                                    <li>Responsive design</li>
+                                    <li>Modern UI/UX</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="#" class="cyber-button primary small">View Live</a>
+                                    <a href="#" class="cyber-button secondary small">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card flip-card featured">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Learning Management System">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                                <div class="featured-badge">FEATURED</div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Good Morning Wisher webApp</h3>
+                                <p>Spread Morning wishes to your love one through my webApp</p>
+                                <div class="tech-tags">
+                                    <span>JavaScript</span>
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-details">
+                                <h4>Morning Wish webApp Features</h4>
+                                <ul>
+                                    <li>God Section</li>
+                                    <li>Type of wishes</li>
+                                    <li>MultiLanguage Supporter</li>
+                                    <li>Festival</li>
+                                    <li>Run with God's Day</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="#" class="cyber-button primary small">View Live</a>
+                                    <a href="https://github.com/Naveen-1705-pro/ProjectGlowmorn" class="cyber-button secondary small">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-footer">
+                <button class="cyber-button primary" onclick="window.open('#', '_blank')">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Get In Touch</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Ready to bring your ideas to life? Let's collaborate on your next project</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always excited to work on new projects and collaborate with amazing people. Whether you have a project in mind or just want to chat about technology, don't hesitate to reach out!</p>
+
+                    <div class="contact-items">
+                        <div class="contact-item flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Email</h4>
+                                        <p>naveen.solanki@email.com</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="contact-action">
+                                        <i class="fas fa-paper-plane"></i>
+                                        <p>Send me an email</p>
+                                        <a href="mailto:naveen.solanki@email.com" class="cyber-button primary small">Email Me</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Phone</h4>
+                                        <p>+91 98765 43210</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="contact-action">
+                                        <i class="fas fa-phone-alt"></i>
+                                        <p>Give me a call</p>
+                                        <a href="tel:+918439210660" class="cyber-button primary small">Call Me</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Location</h4>
+                                        <p>Greater Noida, India</p>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="contact-action">
+                                        <i class="fas fa-globe"></i>
+                                        <p>Based in Gautum Buddha Nagar</p>
+                                        <span class="location-badge">Available for Remote Work</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/Naveen-1705-pro" class="social-icon flip-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="www.linkedin.com/in/naveen-solanki-6a6434301" class="social-icon flip-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://x.com/NaveenSola17105" class="social-icon flip-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/self_loop_naveen?igsh=MXJ6cmM0bnJnYzI0bA==" class="social-icon flip-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <button type="submit" class="cyber-button primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <p>&copy; 2024 Naveen Solanki. Crafted with 💜 using HTML, CSS & JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
